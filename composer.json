@@ -1,0 +1,47 @@
+{
+  "name": "michalper/magento_api_client",
+  "description": "Unofficial Magento REST API Client",
+  "version": "0.1.0",
+  "homepage": "https://github.com/michalper/magento_api_client",
+  "license": "GNU",
+  "authors": [
+    {
+      "name": "Michał Per",
+      "email": "michal.per@encja.com",
+      "homepage": "https://github.com/michalper",
+      "role": "Head Integration Developer"
+    }
+  ],
+  "support": {
+    "email": "michal.per@encja.com"
+  },
+  "keywords": [
+    "magento",
+    "magentoshop",
+    "magentoapi"
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/michalper/tools"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "itav/serializer": "^1.2",
+    "michalper/tools": "dev-master"
+  },
+  "require-dev": {
+  },
+  "type": "library",
+  "autoload": {
+    "psr-0": {
+      "MagentoClient": "lib/"
+    },
+    "psr-4": {
+      "MagentoClient\\": "MagentoClient/",
+      "MagentoClient\\Model\\": "MagentoClient/Model/",
+      "MagentoClient\\Service\\": "MagentoClient/Service/"
+    }
+  }
+}
