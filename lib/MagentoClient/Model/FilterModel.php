@@ -4,6 +4,12 @@ namespace MagentoClient\Model;
 
 class FilterModel
 {
+
+    /**
+     * @var string
+     */
+    private $attribute;
+
     /**
      * @var string
      */
@@ -162,6 +168,24 @@ class FilterModel
     public function setTo($to)
     {
         $this->to = $to;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAttribute()
+    {
+        return $this->attribute;
+    }
+
+    /**
+     * @param string $attribute
+     * @return FilterModel
+     */
+    public function setAttribute($attribute)
+    {
+        $this->attribute = $attribute;
         return $this;
     }
 }
