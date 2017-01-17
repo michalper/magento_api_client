@@ -2,6 +2,9 @@
 
 namespace MagentoClient\Model;
 
+use Itav\Component\Serializer\Serializer;
+use Tools\Tools;
+
 /**
  * Class ParamsModel
  * @package MagentoClient\Model
@@ -159,16 +162,17 @@ class ParamsModel
         }
 
         if ($this->filter) {
+            $i = 0;
+            $s = new Serializer();
             /** @var FilterModel $filter */
             foreach ($this->filter as $filter) {
-                /**
-                 * @TODO
-                 */
+                $params['filter'][$i] = $s->normalize($filter);
+                $i++;
             }
         }
 
         if (!empty($params)) {
-            $ret = '?' . http_build_query($params);
+            $ret = '?' . urldecode(http_build_query($params));
         }
         return $this->resource . $ret;
     }

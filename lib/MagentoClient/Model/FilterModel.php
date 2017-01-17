@@ -50,7 +50,7 @@ class FilterModel
      */
     public function getNeq()
     {
-        return $this->neq;
+        return rawurldecode($this->neq);
     }
 
     /**
@@ -59,7 +59,7 @@ class FilterModel
      */
     public function setNeq($neq)
     {
-        $this->neq = $neq;
+        $this->neq = rawurlencode($neq);
         return $this;
     }
 
@@ -68,7 +68,7 @@ class FilterModel
      */
     public function getIn()
     {
-        return $this->in;
+        return rawurldecode($this->in);
     }
 
     /**
@@ -77,7 +77,7 @@ class FilterModel
      */
     public function setIn($in)
     {
-        $this->in = $in;
+        $this->in = rawurlencode($in);
         return $this;
     }
 
@@ -86,7 +86,7 @@ class FilterModel
      */
     public function getNin()
     {
-        return $this->nin;
+        return rawurldecode($this->nin);
     }
 
     /**
@@ -95,7 +95,7 @@ class FilterModel
      */
     public function setNin($nin)
     {
-        $this->nin = $nin;
+        $this->nin = rawurlencode($nin);
         return $this;
     }
 
@@ -104,7 +104,7 @@ class FilterModel
      */
     public function getGt()
     {
-        return $this->gt;
+        return rawurldecode($this->gt);
     }
 
     /**
@@ -113,7 +113,7 @@ class FilterModel
      */
     public function setGt($gt)
     {
-        $this->gt = $gt;
+        $this->gt = rawurlencode($gt);
         return $this;
     }
 
@@ -122,7 +122,7 @@ class FilterModel
      */
     public function getLt()
     {
-        return $this->lt;
+        return rawurldecode($this->lt);
     }
 
     /**
@@ -131,7 +131,7 @@ class FilterModel
      */
     public function setLt($lt)
     {
-        $this->lt = $lt;
+        $this->lt = rawurlencode($lt);
         return $this;
     }
 
@@ -140,7 +140,7 @@ class FilterModel
      */
     public function getFrom()
     {
-        return $this->from;
+        return rawurldecode($this->from);
     }
 
     /**
@@ -149,7 +149,7 @@ class FilterModel
      */
     public function setFrom($from)
     {
-        $this->from = $from;
+        $this->from = rawurlencode($from);
         return $this;
     }
 
@@ -158,7 +158,7 @@ class FilterModel
      */
     public function getTo()
     {
-        return $this->to;
+        return rawurldecode($this->to);
     }
 
     /**
@@ -167,7 +167,7 @@ class FilterModel
      */
     public function setTo($to)
     {
-        $this->to = $to;
+        $this->to = rawurlencode($to);
         return $this;
     }
 
@@ -176,7 +176,7 @@ class FilterModel
      */
     public function getAttribute()
     {
-        return $this->attribute;
+        return rawurldecode($this->attribute);
     }
 
     /**
@@ -185,7 +185,7 @@ class FilterModel
      */
     public function setAttribute($attribute)
     {
-        $this->attribute = $attribute;
+        $this->attribute = rawurlencode($attribute);
         return $this;
     }
 }
