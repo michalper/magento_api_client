@@ -62,7 +62,7 @@ class Service
      */
     private $headers = [
         'Content-Type' => 'application/json',
-//        'Accept' => '*/*'
+        'Accept' => '*/*'
     ];
 
 
